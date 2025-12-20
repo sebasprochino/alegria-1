@@ -1,0 +1,26 @@
+{
+  "providers": {
+    "groq": {
+      "name": "groq",
+      "api_key": "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",
+      "endpoint": null,
+      "models": [
+        "llama-3.1-8b-instant"
+      ],
+      "is_active": true,
+      "is_local": false
+    },
+    "gemini": {
+      "name": "gemini",
+      "api_key": "AIzaSyAoSVmiTp9Gt5a43JUnWXeevePRar5fHL8",
+      "endpoint": null,
+      "models": [
+        "gemini-2.0-flash-exp"
+      ],
+      "is_active": false,
+      "is_local": false
+    }
+  },
+  "active_provider": "groq",
+  "active_model": null
+}

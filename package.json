@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "prisma": "^5.17.0"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@prisma/client": "^5.17.0",
+    "lucide-react": "^0.562.0"
+  }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: linear-gradient(to bottom, #2c2c2c, #1a1a1a);
+        }
+        .boton {
+            padding: 20px 40px;
+            border: none;
+            border-radius: 10px;
+            background-color: #ff3737;
+            color: white;
+            cursor: pointer;
+            font-size: 24px;
+            font-weight: bold;
+            transition: background-color 0.2s ease;
+        }
+        .boton:hover {
+            background-color: #ff6666;
+        }
+    </style>
+</head>
+<body>
+    <button class="boton" onclick="alert('¡Haz clickeado el botón!')">Haz clic</button>
+    <script>
+        // No se necesita lógica adicional para esta aplicación
+    </script>
+</body>
+</html>

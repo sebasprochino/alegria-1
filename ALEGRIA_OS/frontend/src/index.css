@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+/* ── Design Tokens ─────────────────────────────────────────────────────────── */
+:root {
+  --color-operative:     #0b141a;
+  --color-sidebar-depth: #111b21;
+  --color-accent-teal:   #00a884;
+  --color-accent-indigo: #8696a0;
+  --color-accent-blue:   #53bdeb;
+  --bg-operative:        #0b141a;
+  --text-main:           #e9edef;
+}
+
+/* ── Base ───────────────────────────────────────────────────────────────────── */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-operative);
+  color: var(--text-main);
+  overflow: visible;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Component Classes (plain CSS — no @apply) ─────────────────────────────── */
+.operative-card {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.02);
+  border-radius: 1rem;         /* rounded-2xl */
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05); /* shadow-sm */
+  transition: all 0.15s ease;
+}
+
+.terminal-box {
+  background-color: #f8fafc;   /* slate-50 */
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;      /* rounded-xl */
+  padding: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: #475569;              /* slate-600 */
+}
+
+.btn-operative-primary {
+  background-color: #f1f5f9;   /* slate-100 */
+  border: 1px solid #e2e8f0;
+  color: #334155;              /* slate-700 */
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.75rem;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+.btn-operative-primary:hover {
+  background-color: #e2e8f0;   /* slate-200 */
+}
+
+.btn-action-purple {
+  background-color: #A29BFE;
+  color: #ffffff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.75rem;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  border: none;
+}
+.btn-action-purple:hover {
+  background-color: #8C7AE6;
+}
+
+.wa-background {
+  background-color: var(--bg-operative);
+  background-image:
+    radial-gradient(at 0% 0%,   rgba(168, 230, 207, 0.1) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(162, 155, 254, 0.05) 0px, transparent 50%);
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Color swatches use dynamically-injected CSS classes (see useDynamicColor.ts) — no static rule needed here */
+
+/* ── Blueprint Grid & Technical Aesthetic ────────────────────────────────────── */
+.blueprint-grid {
+  background-image: radial-gradient(#3b82f6 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.dashed-line {
+  background-image: linear-gradient(to bottom, currentColor 50%, transparent 50%);
+  background-size: 100% 8px;
+  background-repeat: repeat-y;
+  background-color: transparent;
+}
+
+/* ── Dynamic System Utilities ─────────────────────────────────────────── */
+.dynamic-logo-container {
+  background-color: var(--logo-bg);
+  border-color: var(--logo-border);
+}
+
+.dynamic-text-color {
+  color: var(--text-color);
+}
+
+.dynamic-platform-tag {
+  background-color: var(--tag-bg);
+  color: var(--tag-color);
+  border-color: var(--tag-border);
+}
+
+.dynamic-progress-fill {
+  width: var(--progress-width);
+}
+
+.timeline-segment {
+  left: var(--segment-start);
+  width: var(--segment-width);
+}

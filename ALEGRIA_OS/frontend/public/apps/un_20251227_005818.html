@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Piano Virtual</title>
+</head>
+<body class="bg-slate-900 text-white h-screen flex justify-center items-center">
+    <div class="piano-container w-1/2 h-1/2 bg-gray-800 rounded-lg shadow-lg p-4">
+        <h1 class="text-3xl font-bold mb-4">Piano Virtual</h1>
+        <div class="piano-keys flex flex-wrap justify-center">
+            <button class="key w-12 h-12 m-2 bg-white rounded-lg shadow-lg" data-note="C4"></button>
+            <button class="key w-12 h-12 m-2 bg-white rounded-lg shadow-lg" data-note="D4"></button>
+            <button class="key w-12 h-12 m-2 bg-white rounded-lg shadow-lg" data-note="E4"></button>
+            <button class="key w-12 h-12 m-2 bg-white rounded-lg shadow-lg" data-note="F4"></button>
+            <button class="key w-12 h-12 m-2 bg-white rounded-lg shadow-lg" data-note="G4"></button>
+            <button class="key w-12 h-12 m-2 bg-white rounded-lg shadow-lg" data-note="A4"></button>
+            <button class="key w-12 h-12 m-2 bg-white rounded-lg shadow-lg" data-note="B4"></button>
+            <button class="key w-12 h-12 m-2 bg-white rounded-lg shadow-lg" data-note="C5"></button>
+            <button class="key w-12 h-12 m-2 bg-white rounded-lg shadow-lg" data-note="D5"></button>
+            <button class="key w-12 h-12 m-2 bg-white rounded-lg shadow-lg" data-note="E5"></button>
+            <button class="key w-12 h-12 m-2 bg-white rounded-lg shadow-lg" data-note="F5"></button>
+            <button class="key w-12 h-12 m-2 bg-white rounded-lg shadow-lg" data-note="G5"></button>
+            <button class="key w-12 h-12 m-2 bg-white rounded-lg shadow-lg" data-note="A5"></button>
+            <button class="key w-12 h-12 m-2 bg-white rounded-lg shadow-lg" data-note="B5"></button>
+        </div>
+        <div class="ritmos mt-4">
+            <button class="ritmo w-12 h-12 m-2 bg-gray-600 rounded-lg shadow-lg" data-ritmo="rock">Rock</button>
+            <button class="ritmo w-12 h-12 m-2 bg-gray-600 rounded-lg shadow-lg" data-ritmo="pop">Pop</button>
+            <button class="ritmo w-12 h-12 m-2 bg-gray-600 rounded-lg shadow-lg" data-ritmo="jazz">Jazz</button>
+        </div>
+    </div>
+    <script>
+        const keys = document.querySelectorAll('.key');
+        const ritmos = document.querySelectorAll('.ritmo');
+        let currentRitmo = null;
+
+        keys.forEach(key => {
+            key.addEventListener('click', () => {
+                const note = key.dataset.note;
+                playNote(note);
+            });
+        });
+
+        ritmos.forEach(ritmo => {
+            ritmo.addEventListener('click', () => {
+                const ritmoName = ritmo.dataset.ritmo;
+                currentRitmo = ritmoName;
+                playRitmo(ritmoName);
+            });
+        });
+
+        function playNote(note) {
+            const audio = new Audio(`https://raw.githubusercontent.com/teolitto/piano-sounds/master/${note}.mp3`);
+            audio.play();
+        }
+
+        function playRitmo(ritmo) {
+            let interval = null;
+            switch (ritmo) {
+                case 'rock':
+                    interval = setInterval(() => {
+                        playNote('C4');
+                        playNote('E4');
+                        playNote('G4');
+                    }, 500);
+                    break;
+                case 'pop':
+                    interval = setInterval(() => {
+                        playNote('C4');
+                        playNote('G4');
+                        playNote('A4');
+                    }, 500);
+                    break;
+                case 'jazz':
+                    interval = setInterval(() => {
+                        playNote('C4');
+                        playNote('E4');
+                        playNote('G4');
+                        playNote('B4');
+                    }, 500);
+                    break;
+            }
+            return interval;
+        }
+    </script>
+</body>
+</html>

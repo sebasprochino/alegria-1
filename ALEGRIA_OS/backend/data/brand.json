@@ -1,0 +1,162 @@
+{
+  "active_brand": "AlegrIA",
+  "brands": {
+    "AlegrIA": {
+      "name": "ALEGRIA",
+      "id": "AlegrIA",
+      "category": "idea",
+      "voice": "Innovadora, accesible, inspiradora",
+      "mood": "Energético y confiable",
+      "palette": [
+        "#7c3aed",
+        "#3b82f6",
+        "#00f6ff"
+      ],
+      "gallery": [
+        {
+          "id": "1776845071",
+          "url": "/api/storage/file/brand_gallery/veo_1776845071.jpg",
+          "analysis": {
+            "adn_visual": {
+              "composicion": "Un icono minimalista y estilizado dentro de un cuadrado con bordes redondeados. El elemento central es un símbolo de brillo o chispa, compuesto por una estrella grande de cuatro puntas, una más pequeña y un punto, todos delineados en blanco. El fondo es un degradado que transita de un púrpura claro a un magenta vibrante.",
+              "estilo": "Digital, moderno, limpio y con un toque de fantasía o mejora. Sugiere funcionalidad de embellecimiento, magia, efectos especiales o un 'toque final'.",
+              "colores": [
+                "#B06FFF",
+                "#FF007F",
+                "#FFFFFF"
+              ]
+            },
+            "contexto_narrativo": {
+              "voz": "Si esta marca/persona hablara, su voz sería vibrante, optimista y empoderadora. Sonaría como una herramienta que promete transformar, embellecer o añadir un toque mágico y especial a algo, invitando a la creatividad y la mejora. Podría ser juguetona y un poco misteriosa, pero siempre con una intención positiva y resultados espectaculares.",
+              "mood": "Magia, creatividad, optimismo, transformación, diversión, chispa, elegancia y un sentido de '¡wow!'."
+            },
+            "sugerencias_marca": [
+              "Desarrollar una campaña de marketing que enfatice la 'transformación instantánea' o el 'toque mágico' que el producto/servicio ofrece, utilizando animaciones de brillo y colores vibrantes para mostrar el antes y el después.",
+              "Integrar el icono en una interfaz de usuario como un botón para 'mejorar', 'aplicar filtro' o 'añadir efecto especial', reforzando la idea de una solución rápida y efectiva para embellecer o destacar contenido."
+            ]
+          },
+          "created_at": "2026-04-22T05:04:31.473982"
+        },
+        {
+          "id": "1776591087",
+          "url": "/api/storage/file/brand_gallery/veo_1776591087.jpg",
+          "analysis": {
+            "adn_visual": {
+              "composicion": "El logo presenta un ícono cuadrado con bordes redondeados y una cara sonriente estilizada a la izquierda, seguido del nombre 'Alegr-IA' y el tagline 'CREATIVE AI' debajo. Todos los elementos están representados con un efecto de neón vibrante sobre un fondo oscuro, creando un contraste llamativo y moderno. La composición es horizontal y equilibrada, con la tipografía en mayúsculas que transmite claridad y presencia.",
+              "estilo": "Futurista, digital, minimalista con un toque lúdico y amigable. Evoca una estética ciberpunk suave o 'neon-glow', combinando la tecnología avanzada con una expresión accesible y optimista.",
+              "colores": [
+                "#FF00FF",
+                "#2A005B"
+              ]
+            },
+            "contexto_narrativo": {
+              "voz": "Joven, innovadora, optimista y accesible. Una voz que inspira creatividad y confianza en la inteligencia artificial, presentando la tecnología de una manera amigable y divertida, invitando a la experimentación y a la alegría en el proceso creativo.",
+              "mood": "Alegría digital, curiosidad, creatividad ilimitada, modernidad amigable, entusiasmo tecnológico."
+            },
+            "sugerencias_marca": [
+              "Desarrollar una serie de animaciones para el logo donde el neón parpadea, pulsa o la cara sonriente cambia sutilmente de expresión (ej. guiño), para reforzar la naturaleza dinámica y 'viva' de la IA.",
+              "Utilizar el ícono de la cara sonriente como un 'sello de aprobación' o 'marca de calidad' en productos o contenido generado por la IA, o como un elemento interactivo en interfaces de usuario para guiar al usuario.",
+              "Expandir la paleta de colores con otros tonos neón complementarios (como azules eléctricos o verdes lima) para diferenciar servicios o características específicas, manteniendo siempre el magenta como color principal distintivo.",
+              "Crear material de marketing que combine el efecto neón con texturas oscuras y futuristas (ej. superficies metálicas o circuitos impresos), para reforzar el aspecto tecnológico y sofisticado de la marca."
+            ]
+          },
+          "created_at": "2026-04-19T06:31:27.687247"
+        },
+        {
+          "id": "1776588716",
+          "url": "https://placehold.co/600x400/162129/FFFFFF?text=Production+Asset",
+          "analysis": {
+            "name": "Producción: video musical al estilo pasion de gavilanes ",
+            "adn_visual": {
+              "estilo": "Generado vía Production Studio"
+            },
+            "contexto_narrativo": {
+              "descripcion": "**TRATAMIENTO VISUAL**\n\nEl video musical está inspirado en la serie \"Pasion de Gavilanes\" y busca capturar la intensidad y la pasión de la relación entre dos personas. La narrativa visual se centra en..."
+            },
+            "technical_prompt": "**TRATAMIENTO VISUAL**\n\nEl video musical está inspirado en la serie \"Pasion de Gavilanes\" y busca capturar la intensidad y la pasión de la relación entre dos personas. La narrativa visual se centra en la conexión emocional y física entre los protagonistas, rodeados de un entorno natural y rústico que evoca la autenticidad y la simplicidad.\n\n**NARRATIVA VISUAL**\n\nLa letra habla de la respuesta a las preguntas, el error perfecto y la búsqueda de amor. La narrativa visual se traduce en imágenes que muestran la intimidad y la conexión entre los personajes, destacando la belleza de la naturaleza que los rodea. La historia se desarrolla en un entorno rural, con paisajes naturales, caballos y una arquitectura tradicional que refleja la autenticidad y la simplicidad.\n\n*   La primera estrofa se desarrolla en un entorno natural, con los personajes caminando por un campo, rodeados de flores y árboles. La cámara capta la conexión emocional entre ellos, con planos cercanos y medios que resaltan la intimidad y la pasión.\n*   El coro se desarrolla en un entorno más rústico, con los personajes en un establo, rodeados de caballos y herramientas agrícolas. La cámara capta la energía y la pasión de la escena, con planos generales y dinámicos que resaltan la conexión física entre los personajes.\n*   La segunda estrofa se desarrolla en un entorno más íntimo, con los personajes en una habitación rústica, rodeados de objetos personales y recuerdos. La cámara capta la conexión emocional y física entre ellos, con planos cercanos y medios que resaltan la intimidad y la pasión.\n\n**STORYBOARD TÉCNICO**\n\nA continuación, se presenta una secuencia de escenas que se desarrollan en el video musical:\n\n1.  **Timecode: 0:00 - 0:30**\\\n    **Acción:** Los personajes caminan por un campo, rodeados de flores y árboles.\\\n    **Cámara:** Plano general, con la cámara en un drone que capta la belleza del paisaje natural.\n2.  **Timecode: 0:30 - 1:00**\\\n    **Acción:** Los personajes se acercan, con la cámara capta la conexión emocional entre ellos.\\\n    **Cámara:** Plano medio, con la cámara en un movimiento suave que resalta la intimidad y la pasión.\n3.  **Timecode: 1:00 - 1:30**\\\n    **Acción:** El coro comienza, con los personajes en un establo, rodeados de caballos y herramientas agrícolas.\\\n    **Cámara:** Plano general, con la cámara en un movimiento dinámico que resalta la energía y la pasión de la escena.\n4.  **Timecode: 1:30 - 2:00**\\\n    **Acción:** Los personajes se acercan, con la cámara capta la conexión física entre ellos.\\\n    **Cámara:** Plano cercano, con la cámara en un movimiento suave que resalta la intimidad y la pasión.\n5.  **Timecode: 2:00 - 2:30**\\\n    **Acción:** La segunda estrofa comienza, con los personajes en una habitación rústica, rodeados de objetos personales y recuerdos.\\\n    **Cámara:** Plano medio, con la cámara en un movimiento suave que resalta la conexión emocional y física entre los personajes.\n\n**PROMPTS MAESTROS**\n\nA continuación, se presentan dos prompts maestros que encapsulan la esencia del video musical:\n\n*   **\\[MASTER\\]:** \"Un video musical que capta la intensidad y la pasión de la relación entre dos personas, rodeados de un entorno natural y rústico que evoca la autenticidad y la simplicidad, con un enfoque en la conexión emocional y física entre los personajes.\"\n*   **\\[master\\]:** \"Un video musical que combina la belleza del paisaje natural con la intimidad y la pasión de la relación entre dos personas, utilizando planos generales y dinámicos para resaltar la energía y la conexión entre los personajes, con un enfoque en la autenticidad y la simplicidad.\""
+          },
+          "created_at": "2026-04-19T05:51:56.436105"
+        },
+        {
+          "id": "1776576651",
+          "url": "/api/storage/file/brand_gallery/veo_1776576651.jpg",
+          "analysis": {
+            "adn_visual": {
+              "composicion": "Un retrato de medio cuerpo que enfatiza el rostro y la conexión del sujeto con el entorno acuático. El hombre emerge del agua, con un primer plano que captura su expresión y los detalles de su cabello y el rosario. La línea horizontal del agua proporciona estabilidad, mientras que la profundidad de campo suave realza la figura central.",
+              "iluminacion": "Luz natural, suave y difusa, con destellos dorados que sugieren la 'golden hour' o un sol filtrado. Hay un sutil contraluz que realza el contorno de su cabello, creando un halo, y reflejos brillantes en la superficie del agua, lo que añade una sensación de misticismo y calidez.",
+              "colores": [
+                "Tonos tierra (piel, cabello, rosario)",
+                "Verdes profundos y oliva (fondo de árboles borroso)",
+                "Azules y grises acuáticos (agua)",
+                "Destellos dorados/amarillos cálidos (luz solar)"
+              ],
+              "estilo": "Naturalista, auténtico, contemplativo, ligeramente místico y rústico. La fotografía transmite una estética de 'slow living' y una conexión profunda con la naturaleza y la espiritualidad, con una calidad cinematográfica sutil."
+            },
+            "contexto_narrativo": {
+              "voz": "Sabia, serena, auténtica, arraigada, conectada con lo ancestral y lo natural. Habla de la introspección, la resiliencia y la paz que se encuentra en la conexión con los elementos.",
+              "mood": "Reflexivo, místico, tranquilo, genuino y profundo. Evoca una sensación de paz interior, fuerza silenciosa y una conexión espiritual con el entorno."
+            },
+            "prompt_tecnico_mj": "Close-up portrait of a mature man with long, dark curly hair, emerging from serene river water. He wears a prominent, rustic wooden rosary necklace. His gaze is direct, intense, and contemplative. Natural, soft golden hour light creates subtle highlights on his wet hair and the water's surface. Blurred lush green foliage and sunlit water reflections in the background. Earthy, naturalistic color palette. Authentic, profound, spiritual, and introspective mood. Cinematic realism. --ar 2:3 --v 5.2",
+            "sugerencias_marca": [
+              "**Joyería Artesanal de Alta Gama con Raíces Espirituales:** Una marca que valora la conexión con la naturaleza y la fe, utilizando materiales orgánicos y diseños con historia. 'Hecho a mano con alma, conectado con el origen.'",
+              "**Marca de Belleza o Cuidado Personal Masculino 'Clean Beauty' de Lujo:** Enfocada en ingredientes naturales, autenticidad y bienestar. 'La fuerza y serenidad de la naturaleza en tu piel.'",
+              "**Diseño de Experiencias o Retiros de Lujo en la Naturaleza:** Para aquellos que buscan introspección, conexión y renovación en entornos vírgenes. 'Un santuario para el alma en la inmensidad.'",
+              "**Moda Sostenible de Lujo con Inspiración Étnica/Artesanal:** Ropa que respeta el medio ambiente y celebra la herencia cultural, con una estética atemporal y auténtica. 'Viste la historia, siente la tierra.'"
+            ]
+          },
+          "created_at": "2026-04-19T02:30:51.234084"
+        }
+      ],
+      "links": [],
+      "updated_at": "2026-04-19T06:12:51.952188"
+    },
+    "palulo": {
+      "id": "palulo",
+      "name": "palulo",
+      "category": "persona",
+      "voice": "La imagen comunica una voz de autenticidad profunda, sabiduría ancestral, serenidad inquebrantable y una conexión intrínseca con el mundo natural y espiritual. Habla de introspección, resiliencia y la búsqueda de lo esencial. Es una voz calma pero poderosa, que irradia verdad y experiencia vital.",
+      "mood": "Retrato con una estética naturalista, auténtica y profundamente arraigada. Combina elementos de misticismo, espiritualidad y una conexión inquebrantable con la naturaleza. Posee una cualidad atemporal, casi ancestral, que sugiere sabiduría y serenidad. Es un estilo que valora lo orgánico, lo real y lo trascendente por encima de la artificialidad o el lujo ostentoso.",
+      "palette": [
+        "Verdes profundos y oliva (entorno)",
+        "Marrón terroso (piel, cabello, rosario)",
+        "Tonos dorados y blanquecinos (reflejos de luz en el agua y contraluz)"
+      ],
+      "gallery": [
+        {
+          "id": "1776578177",
+          "url": "/api/storage/file/brand_gallery/veo_1776578177.jpg",
+          "analysis": {
+            "adn_visual": {
+              "composicion": "Retrato de medio cuerpo, encuadre central que otorga frontalidad y autoridad al sujeto. El hombre mira directamente al espectador, generando una conexión íntima. La profundidad de campo es limitada, enfocando al sujeto y desenfocando el entorno natural (río, árboles), lo que subraya su presencia y lo aísla en un aura de contemplación. La línea del agua a la altura de los hombros añade un elemento de inmersión y pureza.",
+              "iluminacion": "Iluminación natural, suave y difusa, con un marcado contraluz o luz de borde (rim light) que realza el contorno del cabello y hombros, especialmente en la parte superior derecha. Esto crea un efecto casi etéreo o sagrado. La luz sobre el agua, con reflejos sutiles y dorados, añade una capa de brillo orgánico y vitalidad. Es una luz que evoca la 'hora dorada' o un momento de paz.",
+              "colores": [
+                "Verdes profundos y oliva (entorno)",
+                "Marrón terroso (piel, cabello, rosario)",
+                "Tonos dorados y blanquecinos (reflejos de luz en el agua y contraluz)"
+              ],
+              "estilo": "Retrato con una estética naturalista, auténtica y profundamente arraigada. Combina elementos de misticismo, espiritualidad y una conexión inquebrantable con la naturaleza. Posee una cualidad atemporal, casi ancestral, que sugiere sabiduría y serenidad. Es un estilo que valora lo orgánico, lo real y lo trascendente por encima de la artificialidad o el lujo ostentoso."
+            },
+            "contexto_narrativo": {
+              "voz": "La imagen comunica una voz de autenticidad profunda, sabiduría ancestral, serenidad inquebrantable y una conexión intrínseca con el mundo natural y espiritual. Habla de introspección, resiliencia y la búsqueda de lo esencial. Es una voz calma pero poderosa, que irradia verdad y experiencia vital.",
+              "mood": "Evoca una atmósfera de calma profunda, solemnidad, misticismo y paz interior. Sugiere un momento de reflexión o un ritual sagrado. Hay una sensación de reverencia por la naturaleza y por la experiencia humana en su forma más pura. El mood es contemplativo y espiritualmente enriquecedor."
+            },
+            "prompt_tecnico_mj": "Close-up portrait of a serene man, possibly an indigenous or spiritual elder, with long, dark, wet curly hair, immersed chest-deep in clear river water. He wears a simple, long dark wooden rosary around his neck. His gaze is direct, intense, and contemplative. Soft, golden hour natural light creates a beautiful rim light on his hair and shoulders, with subtle, shimmering reflections on the water surface. The background features blurred lush green foliage and calm water, creating a sense of depth and natural sanctuary. Authentic, deeply soulful, contemplative, spiritual, and raw photography. Shot with a shallow depth of field, 85mm prime lens, cinematic aesthetic.",
+            "sugerencias_marca": [
+              "Marcas de lujo enfocadas en bienestar y espiritualidad: Retiros de meditación de alta gama, spas holísticos o productos de autocuidado inspirados en tradiciones ancestrales.",
+              "Joyas artesanales con significado: Marcas que crean piezas únicas con materiales naturales, que cuenten una historia cultural o espiritual profunda, lejos de lo meramente decorativo.",
+              "Moda sostenible de alta calidad: Prendas que celebran la conexión con la naturaleza, fabricadas éticamente con materiales orgánicos y un diseño atemporal y consciente.",
+              "Cosmética y perfumería nicho natural: Productos que evocan pureza, ingredientes botánicos raros y una experiencia sensorial que conecta con la tierra y sus elementos.",
+              "Experiencias de viaje de lujo inmersivas: Ofertas de ecoturismo de lujo, expediciones culturales o retiros espirituales en entornos naturales prístinos.",
+              "Bebidas espirituosas de autor o café premium: Marcas con una narrativa fuerte sobre el origen, el terruño, la tradición y el proceso artesanal que honra la naturaleza."
+            ],
+            "category": "persona",
+            "name": "palulo"
+          },
+          "created_at": "2026-04-19T02:56:17.972621"
+        }
+      ],
+      "links": [],
+      "updated_at": "2026-04-19T02:56:17.969185"
+    }
+  }
+}

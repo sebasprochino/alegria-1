@@ -1,0 +1,45 @@
+# Entornos Virtuales
+venv/
+env/
+.env
+.venv/
+backend/venv/
+
+# Paquetes de Node
+node_modules/
+frontend/node_modules/
+*/node_modules/
+
+# Caché de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+
+# Compilados de Frontend
+dist/
+build/
+out/
+.next/
+
+# Logs y Bases de datos locales
+*.log
+backend/storage/*.jsonl
+backend/storage/*.db
+backend/storage/*.json
+!backend/storage/decision_history.jsonl
+!backend/storage/nexus_memory.json
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# MacOS/Windows
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Duplicados temporales
+alegria_sdk/

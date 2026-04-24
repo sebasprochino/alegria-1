@@ -1,0 +1,75 @@
+{
+  "version": "1.0",
+  "metadata": {
+    "author": "ALEGR-IA OS Kernel",
+    "updated_at": "2026-04-17T05:55:00Z"
+  },
+  "core_principles": {
+    "coherence_over_style": true,
+    "no_ambiguity": true,
+    "semantic_alignment_required": true,
+    "audit_trail_mandatory": true
+  },
+  "aesthetic_dimensions": {
+    "contrast": {
+      "values": ["low", "medium", "high"],
+      "scale": [0.0, 0.5, 1.0]
+    },
+    "density": {
+      "values": ["minimal", "balanced", "rich"],
+      "scale": [0.0, 0.5, 1.0]
+    },
+    "tone": {
+      "values": ["neutral", "emotional", "dramatic"],
+      "scale": [0.0, 0.5, 1.0]
+    },
+    "tech_level": {
+      "values": ["organic", "hybrid", "synthetic"],
+      "scale": [0.0, 0.5, 1.0]
+    },
+    "color_energy": {
+      "values": ["muted", "vibrant", "neon"],
+      "scale": [0.0, 0.5, 1.0]
+    }
+  },
+  "validation_rules": {
+    "reject_if": [
+      {
+        "pattern": ["low", "rich"],
+        "dimensions": ["contrast", "density"],
+        "reason": "Legibilidad comprometida: baja relación de contraste con alta densidad visual.",
+        "severity": "critical"
+      },
+      {
+        "pattern": ["vibrant", "organic"],
+        "dimensions": ["color_energy", "tech_level"],
+        "reason": "Disonancia de origen: colores sintéticos saturados en estructuras puramente orgánicas.",
+        "severity": "warning"
+      },
+      {
+        "pattern": ["dramatic", "minimal"],
+        "dimensions": ["tone", "density"],
+        "reason": "Falta de soporte visual: el tono dramático requiere una densidad mínima de elementos para sostener la narrativa.",
+        "severity": "warning"
+      }
+    ]
+  },
+  "presets": {
+    "tech_sovereign": {
+      "contrast": "high",
+      "density": "minimal",
+      "tone": "dramatic",
+      "tech_level": "synthetic",
+      "color_energy": "neon",
+      "description": "Estética de alto impacto, minimalista y digitalmente pura."
+    },
+    "organic_data": {
+      "contrast": "medium",
+      "density": "balanced",
+      "tone": "neutral",
+      "tech_level": "organic",
+      "color_energy": "muted",
+      "description": "Visualización fluida y natural de flujos de información."
+    }
+  }
+}

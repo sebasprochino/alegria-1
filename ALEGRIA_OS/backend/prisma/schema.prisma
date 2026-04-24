@@ -1,0 +1,117 @@
+// ALEGRIA_OS — schema.prisma
+// Sincronizar: npx prisma db push --skip-generate
+//              npx prisma generate
+
+generator client {
+  provider             = "prisma-client-py"
+  interface            = "asyncio"
+  recursive_type_depth = 5
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+// ─── MEMORIA DE SESIÓN ────────────────────────────────────────────────────────
+
+model ChatSession {
+  id        String        @id @default(uuid())
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+  messages  ChatMessage[]
+  metadata  String?       // JSON — contexto extra
+}
+
+model ChatMessage {
+  id        String      @id @default(uuid())
+  role      String      // "user" | "anima" | "system"
+  content   String
+  createdAt DateTime    @default(now())
+  session   ChatSession @relation(fields: [sessionId], references: [id])
+  sessionId String
+  msgType   String?     @default("text") // text | audio | image | web
+  metadata  String?     // JSON — urls, duration, etc.
+}
+
+// ─── CONFIGURACIÓN ────────────────────────────────────────────────────────────
+
+model UserPreferences {
+  userId           String   @id
+  tonePreference   String   @default("balanced")
+  responseLength   String   @default("medium")
+  searchEnabled    Boolean  @default(true)
+  newsTopics       String?  // JSON list
+  customRejections String?  // JSON list — RejectionService
+  updatedAt        DateTime @updatedAt
+}
+
+model FoundationalMemory {
+  key       String   @id // "sistema_base"
+  category  String   // "sistema" | "usuario" | "reglas"
+  content   String   // JSON completo del archivo de memoria
+  updatedAt DateTime @updatedAt
+}
+
+// ─── FASE 1: AUDITORÍA ────────────────────────────────────────────────────────
+
+// Registro irreversible de cada evento del pipeline ANIMA.
+// Escrito por: AuditEmitter → MemoryOrchestrator.store_events_batch()
+// Leído por:   DeveloperConsole (/api/anima/audit/stream) + /audit.trace {id}
+model AuditLog {
+  id           Int      @id @default(autoincrement())
+  intentionId  String   // UUID corto del ciclo — agrupa stages de una misma intención
+  stage        String   // received | provider | guard | antigravity | response | error | override
+  agent        String   // ANIMA | KERNEL | DEVELOPER | OPERATOR | RADAR
+  timestamp    Float    // Unix timestamp del momento real del evento (desde Python)
+  data         String   // JSON — payload específico del stage
+  createdAt    DateTime @default(now())
+
+  @@index([intentionId])
+  @@index([stage])
+  @@index([createdAt])
+  @@map("audit_log")   // nombre exacto que usa memory_orchestrator.py
+}
+
+// ─── FASE 3: LÉXICO ───────────────────────────────────────────────────────────
+
+// Aprende cómo habla el operador.
+// Se guarda SOLO cuando el resultado fue validado por el operador.
+// Trigger: operador confirma → Lexicon guarda patrón.
+model LexiconEntry {
+  id           Int      @id @default(autoincrement())
+  userId       String   @default("chinex")
+  rawInput     String   // Lo que dijo el operador textualmente
+  resolvedIntent String // Intención resuelta después de la validación
+  intentionId  String?  // Vincula con AuditLog si existe
+  confidence   Float    @default(1.0)
+  usageCount   Int      @default(1) // Cuántas veces apareció este patrón
+  lastUsedAt   DateTime @default(now())
+  createdAt    DateTime @default(now())
+
+  @@index([userId])
+  @@index([resolvedIntent])
+  @@map("lexicon_entry")
+}
+
+// ─── FASE 3: NEXUS RULES ─────────────────────────────────────────────────────
+
+// Restricciones por nivel que condicionan el prompt final de ANIMA.
+// Jerarquía: Negativos > Positivos. Nivel modelo > proyecto > usuario.
+// Editables en tiempo real por el operador desde el NexusPanel.
+model NexusRule {
+  id          Int      @id @default(autoincrement())
+  userId      String   @default("chinex")
+  scope       String   // "user" | "project" | "model"
+  type        String   // "negative" | "positive"
+  rule        String   // Texto de la regla: "no usar rojo", "tono serio", "no inventar datos"
+  projectId   String?  // Si scope=project, a qué proyecto aplica
+  active      Boolean  @default(true)
+  priority    Int      @default(0) // Mayor número = mayor prioridad en inyección al prompt
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([userId, scope, active])
+  @@index([projectId])
+  @@map("nexus_rule")
+}

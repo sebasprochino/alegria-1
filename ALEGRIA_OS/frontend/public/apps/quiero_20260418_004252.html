@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-white h-screen flex items-center justify-center flex-col">
+    <h1 class="text-5xl font-bold mb-4">Contador Simple</h1>
+    <div class="flex flex-col items-center justify-center">
+        <p class="text-9xl font-bold mb-4" id="contador">0</p>
+        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" onclick="incrementar()">Incrementar</button>
+        <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-4" onclick="decrementar()">Decrementar</button>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4" onclick="reiniciar()">Reiniciar</button>
+    </div>
+
+    <script>
+        let contador = 0;
+        const elementoContador = document.getElementById('contador');
+
+        function incrementar() {
+            contador++;
+            elementoContador.textContent = contador;
+        }
+
+        function decrementar() {
+            contador--;
+            elementoContador.textContent = contador;
+        }
+
+        function reiniciar() {
+            contador = 0;
+            elementoContador.textContent = contador;
+        }
+    </script>
+</body>
+</html>

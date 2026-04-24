@@ -1,0 +1,20 @@
+{
+  "active_brand": "AlegrIA",
+  "brands": {
+    "AlegrIA": {
+      "name": "AlegrIA",
+      "id": "AlegrIA",
+      "category": "brand",
+      "voice": "Innovadora, accesible, inspiradora",
+      "mood": "Energético y confiable",
+      "palette": [
+        "#7c3aed",
+        "#3b82f6",
+        "#00f6ff"
+      ],
+      "gallery": [],
+      "links": [],
+      "updated_at": "2026-04-17T00:00:00Z"
+    }
+  }
+}

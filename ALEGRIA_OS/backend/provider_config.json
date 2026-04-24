@@ -1,0 +1,108 @@
+{
+  "providers": {
+    "db5bd61c-c3e9-4021-b8eb-15b61cb7f68e": {
+      "id": "db5bd61c-c3e9-4021-b8eb-15b61cb7f68e",
+      "provider_type": "groq",
+      "alias": "Groq",
+      "api_key": "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",
+      "endpoint": null,
+      "models": [
+        "llama-3.3-70b-versatile",
+        "llama-3.1-8b-instant",
+        "llama-3.2-11b-vision-preview",
+        "llama-3.2-90b-vision-preview",
+        "meta-llama/llama-4-scout-17b-16e-instruct"
+      ],
+      "is_active": true,
+      "is_local": false,
+      "priority": 10,
+      "timeout_ms": 30000
+    },
+    "10b25b6e-2bdb-44e5-8bd5-29749641b3cb": {
+      "id": "10b25b6e-2bdb-44e5-8bd5-29749641b3cb",
+      "provider_type": "openai",
+      "alias": "Openai (env)",
+      "api_key": "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",
+      "endpoint": null,
+      "models": [
+        "gpt-4o-mini"
+      ],
+      "is_active": false,
+      "is_local": false,
+      "priority": 10,
+      "timeout_ms": 30000
+    },
+    "c4b49393-dfec-45ec-8fd7-6806fe11ed53": {
+      "id": "c4b49393-dfec-45ec-8fd7-6806fe11ed53",
+      "provider_type": "gemini",
+      "alias": "Gemini Master",
+      "api_key": "AIzaSyBE1lzqWzu86dENgo2-sMQOOUve_aaNKfw",
+      "endpoint": null,
+      "models": [
+        "gemini-2.5-flash",
+        "gemini-3.1-flash-lite-preview"
+      ],
+      "is_active": false,
+      "is_local": false,
+      "priority": 10,
+      "timeout_ms": 30000
+    },
+    "a080bcba-b000-49f1-aff0-dcb63a84549f": {
+      "id": "a080bcba-b000-49f1-aff0-dcb63a84549f",
+      "provider_type": "gemini",
+      "alias": "Gemini Alt 1",
+      "api_key": "AIzaSyAoSVmiTp9Gt5a43JUnWXeevePRar5fHL8",
+      "endpoint": null,
+      "models": [
+        "gemini-2.5-flash",
+        "gemini-1.5-flash"
+      ],
+      "is_active": false,
+      "is_local": false,
+      "priority": 11,
+      "timeout_ms": 30000
+    },
+    "gemini-alt-2-id": {
+      "id": "gemini-alt-2-id",
+      "provider_type": "gemini",
+      "alias": "Gemini Alt 2",
+      "api_key": "AIzaSyCeR1fDXDUxLgbSsS82ZDRHzSa1rulQdDc",
+      "endpoint": null,
+      "models": [
+        "gemini-2.5-flash",
+        "gemini-1.5-pro"
+      ],
+      "is_active": false,
+      "is_local": false,
+      "priority": 12,
+      "timeout_ms": 30000
+    },
+    "ollama-local-node-1234": {
+      "id": "ollama-local-node-1234",
+      "provider_type": "ollama",
+      "alias": "Ollama Local",
+      "api_key": null,
+      "endpoint": "http://localhost:11434",
+      "models": [
+        "llama3.1:8b"
+      ],
+      "is_active": false,
+      "is_local": true,
+      "priority": 20,
+      "timeout_ms": 120000
+    }
+  },
+  "active_provider_id": "db5bd61c-c3e9-4021-b8eb-15b61cb7f68e",
+  "active_model": "llama-3.3-70b-versatile",
+
+  "cinematic_audio": {
+    "provider": "elevenlabs",
+    "api_key": "YOUR_ELEVENLABS_KEY",
+    "model": "eleven_multilingual_v3"
+  },
+  "video_engine": {
+    "provider": "siliconflow",
+    "api_key": "YOUR_SILICONFLOW_KEY",
+    "model": "kling-v1"
+  }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-white h-screen flex justify-center items-center">
+    <div class="bg-gray-800 p-8 rounded-lg shadow-lg w-96 h-96 flex flex-col">
+        <input type="text" id="display" class="bg-gray-700 p-2 rounded-lg text-2xl font-bold w-full mb-4" disabled>
+        <div class="grid grid-cols-4 gap-2">
+            <button class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-lg" onclick="limpiar()">C</button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg" onclick="borrar()">DEL</button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg" onclick="calcular('%')">Mod</button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg" onclick="calcular('/')">/</button>
+            <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg" onclick="calcular(7)">7</button>
+            <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg" onclick="calcular(8)">8</button>
+            <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg" onclick="calcular(9)">9</button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg" onclick="calcular('*')">*</button>
+            <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg" onclick="calcular(4)">4</button>
+            <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg" onclick="calcular(5)">5</button>
+            <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg" onclick="calcular(6)">6</button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg" onclick="calcular('-')">-</button>
+            <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg" onclick="calcular(1)">1</button>
+            <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg" onclick="calcular(2)">2</button>
+            <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg" onclick="calcular(3)">3</button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg" onclick="calcular('+')">+</button>
+            <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg" onclick="calcular(0)">0</button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg" onclick="calcular('.')">.</button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg" onclick="calcular('sin')">sin</button>
+            <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg" onclick="igual()">=</button>
+        </div>
+    </div>
+    <script>
+        let display = document.getElementById('display');
+        let valor = '';
+
+        function calcular(valor2) {
+            valor += valor2;
+            display.value = valor;
+        }
+
+        function igual() {
+            try {
+                let resultado = eval(valor);
+                display.value = resultado;
+                valor = resultado.toString();
+            } catch (error) {
+                display.value = 'Error';
+                valor = '';
+            }
+        }
+
+        function limpiar() {
+            display.value = '';
+            valor = '';
+        }
+
+        function borrar() {
+            valor = valor.slice(0, -1);
+            display.value = valor;
+        }
+    </script>
+</body>
+</html>

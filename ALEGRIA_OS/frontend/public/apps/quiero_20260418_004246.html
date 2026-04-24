@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-white h-screen flex items-center justify-center">
+    <div class="bg-slate-700 p-10 rounded-2xl shadow-2xl w-80">
+        <h1 class="text-3xl font-bold mb-4">Calculadora Científica</h1>
+        <input type="text" id="display" class="w-full p-2 text-2xl font-bold bg-slate-600 rounded-lg mb-4" disabled>
+        <div class="grid grid-cols-4 gap-2">
+            <button class="p-2 bg-slate-600 rounded-lg hover:bg-slate-500" onclick="clearDisplay()">C</button>
+            <button class="p-2 bg-slate-600 rounded-lg hover:bg-slate-500" onclick="backspace()">DEL</button>
+            <button class="p-2 bg-slate-600 rounded-lg hover:bg-slate-500" onclick="calculate('%')">%</button>
+            <button class="p-2 bg-slate-600 rounded-lg hover:bg-slate-500" onclick="calculate('/')">/</button>
+            <button class="p-2 bg-slate-600 rounded-lg hover:bg-slate-500" onclick="calculate(7)">7</button>
+            <button class="p-2 bg-slate-600 rounded-lg hover:bg-slate-500" onclick="calculate(8)">8</button>
+            <button class="p-2 bg-slate-600 rounded-lg hover:bg-slate-500" onclick="calculate(9)">9</button>
+            <button class="p-2 bg-slate-600 rounded-lg hover:bg-slate-500" onclick="calculate('*')">*</button>
+            <button class="p-2 bg-slate-600 rounded-lg hover:bg-slate-500" onclick="calculate(4)">4</button>
+            <button class="p-2 bg-slate-600 rounded-lg hover:bg-slate-500" onclick="calculate(5)">5</button>
+            <button class="p-2 bg-slate-600 rounded-lg hover:bg-slate-500" onclick="calculate(6)">6</button>
+            <button class="p-2 bg-slate-600 rounded-lg hover:bg-slate-500" onclick="calculate('-')">-</button>
+            <button class="p-2 bg-slate-600 rounded-lg hover:bg-slate-500" onclick="calculate(1)">1</button>
+            <button class="p-2 bg-slate-600 rounded-lg hover:bg-slate-500" onclick="calculate(2)">2</button>
+            <button class="p-2 bg-slate-600 rounded-lg hover:bg-slate-500" onclick="calculate(3)">3</button>
+            <button class="p-2 bg-slate-600 rounded-lg hover:bg-slate-500" onclick="calculate('+')">+</button>
+            <button class="p-2 bg-slate-600 rounded-lg hover:bg-slate-500" onclick="calculate(0)">0</button>
+            <button class="p-2 bg-slate-600 rounded-lg hover:bg-slate-500" onclick="calculate('.')" >.</button>
+            <button class="p-2 bg-slate-600 rounded-lg hover:bg-slate-500" onclick="calculate('sqrt')">√</button>
+            <button class="p-2 bg-slate-600 rounded-lg hover:bg-slate-500" onclick="calculate('sin')">sin</button>
+            <button class="p-2 bg-slate-600 rounded-lg hover:bg-slate-500" onclick="calculate('cos')">cos</button>
+            <button class="p-2 bg-slate-600 rounded-lg hover:bg-slate-500" onclick="calculate('tan')">tan</button>
+            <button class="p-2 bg-slate-600 rounded-lg hover:bg-slate-500 col-span-4" onclick="calculate('=')">=</button>
+        </div>
+    </div>
+    <script>
+        let display = document.getElementById('display');
+        let calculation = '';
+
+        function clearDisplay() {
+            display.value = '';
+            calculation = '';
+        }
+
+        function backspace() {
+            calculation = calculation.slice(0, -1);
+            display.value = calculation;
+        }
+
+        function calculate(value) {
+            if (value === '=') {
+                try {
+                    display.value = eval(calculation);
+                } catch (e) {
+                    display.value = 'Error';
+                }
+            } else if (value === 'sqrt') {
+                calculation += 'Math.sqrt(';
+            } else if (value === 'sin') {
+                calculation += 'Math.sin(';
+            } else if (value === 'cos') {
+                calculation += 'Math.cos(';
+            } else if (value === 'tan') {
+                calculation += 'Math.tan(';
+            } else {
+                calculation += value;
+            }
+            display.value = calculation;
+        }
+    </script>
+</body>
+</html>

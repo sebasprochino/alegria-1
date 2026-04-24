@@ -1,0 +1,119 @@
+### Diagnóstico
+El problema radica en la falta de actualización en tiempo real del registro de auditoría. Esto puede deberse a una mala configuración del `AuditEmitter` o a un problema en la forma en que se están procesando los eventos.
+
+### Acción
+Se necesitan dos acciones para solucionar este problema:
+1. Asegurarse de que el `AuditEmitter` esté configurado correctamente para procesar los eventos en tiempo real.
+2. Revisar la forma en que se están procesando los eventos para asegurarse de que se estén enviando correctamente al `AuditEmitter`.
+
+### Código
+Para solucionar el problema, se puede modificar el código del `AuditEmitter` para asegurarse de que se estén procesando los eventos en tiempo real. Se puede agregar un método para procesar los eventos de forma asíncrona y otro para asegurarse de que se estén enviando correctamente al `AuditEmitter`.
+
+```python
+# backend/src/services/audit_emitter.py
+
+import asyncio
+import json
+import time
+from typing import Dict, Any, List
+
+from src.services.memory.memory_orchestrator import MemoryOrchestrator
+
+memory = MemoryOrchestrator(session_source="system")
+
+
+class AuditEmitter:
+    def __init__(self):
+        self.subscribers: List[asyncio.Queue] = []
+
+        # Cola interna (NO pierde eventos)
+        self.queue: asyncio.Queue = asyncio.Queue()
+
+        # Config batching
+        self.batch_size = 25
+        self.flush_interval = 0.1  # segundos
+
+        self._worker_task = None
+        self._running = False
+
+    # ─────────────────────────────
+    # PUBLIC API
+    # ─────────────────────────────
+    async def emit(self, event: Dict[str, Any]):
+        # 1. Persistencia → SIEMPRE
+        await self.queue.put(event)
+
+        # 2. Streaming → best effort
+        for q in self.subscribers:
+            try:
+                q.put_nowait(event)
+            except asyncio.QueueFull:
+                pass  # permitido perder UI
+
+    async def subscribe(self):
+        q = asyncio.Queue(maxsize=100)  # UI puede dropear
+        self.subscribers.append(q)
+        return q
+
+    # ─────────────────────────────
+    # WORKER
+    # ─────────────────────────────
+    async def start(self):
+        if not self._running:
+            self._running = True
+            self._worker_task = asyncio.create_task(self._worker())
+
+    async def stop(self):
+        self._running = False
+        if self._worker_task:
+            await self._worker_task
+
+    async def _worker(self):
+        batch: List[Dict[str, Any]] = []
+        last_flush = time.time()
+
+        while self._running:
+            try:
+                timeout = self.flush_interval
+                event = await asyncio.wait_for(self.queue.get(), timeout)
+
+                batch.append(event)
+
+                if len(batch) >= self.batch_size:
+                    await self._flush(batch)
+                    batch.clear()
+                    last_flush = time.time()
+
+            except asyncio.TimeoutError:
+                # flush por tiempo
+                if batch:
+                    await self._flush(batch)
+                    batch.clear()
+                    last_flush = time.time()
+
+    async def _flush(self, batch: List[Dict[str, Any]]):
+        try:
+            await memory.store_events_batch(batch)
+        except Exception as e:
+            # GhostNode: no rompe sistema
+            print(f"[AuditEmitter] flush error: {e}")
+
+    # Nuevo método para procesar eventos de forma asíncrona
+    async def process_events(self, events: List[Dict[str, Any]]):
+        for event in events:
+            await self.emit(event)
+
+# Ejemplo de uso
+async def main():
+    audit_emitter = AuditEmitter()
+    await audit_emitter.start()
+
+    # Procesar eventos de forma asíncrona
+    events = [{"type": "evento1"}, {"type": "evento2"}]
+    await audit_emitter.process_events(events)
+
+asyncio.run(main())
+```
+
+### Impacto
+La modificación del código permitirá que los eventos se procesen en tiempo real y se actualice el registro de auditoría de forma correcta. Sin embargo, es importante tener en cuenta que la implementación de esta solución puede requerir cambios adicionales en otros partes del sistema para asegurarse de que se estén enviando los eventos correctamente al `AuditEmitter`.
